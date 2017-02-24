@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DPL Virtual System</title>
+<!-- Use Font Awesome for icons and such (FontAwesome/FontAwesome)>
+<link rel="stylesheet" href="fa.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+<h1>DPL Virtual System</h1>
+<h2>A virtual system, like CHIP-8</h2>
+<a href="https://github.com/dpl-virtualsystem/DPL">Fork us on GitHub</a>
+</div>
+<h3><i class="fa-cog fa-3x"></i>Specs</h3>
+<p>DPL has a 256x256 screen, and an 8 button keypad.<br/>
+Programs are stored in ROM (memory bank 0x0) starting at $0000.<br/>
+Keypad state is at $0000 in RAM (emory bank 0x1).
+VRAM (memory bank 0x2) is accessed as 0xXXYY where X is the X coord and Y is the Y coord. (i.e; upper left corner is 0x0000, lower right is 0xFFFF)
+ROMs are limited to being 65536 bytes in size.</p>
+
+<h3>Keypad state format</h3>
+<p>0000 0000<br/>
+1234 5678</p>
+<ol>
+<li>Up (default W)</li>
+<li>Down (default S)</li>
+<li>Left (default A)</li>
+<li>Right (default D)</li>
+<li>Button 1 (default Q)</li>
+<li>Button 2 (default E)</li>
+<li>Button 3 (default Z)</li>
+<li>Button 4 (default X)</li>
+</ol>
+</body>
+</html>
